@@ -22,9 +22,7 @@ class Digitizer:
         self.Failed_Segments = []
 
         self.log_mile_ref = QgsVectorLayer(
-            "c:/users/an.tran***REMOVED***/desktop/tfad/mdot_log_miles.gpkg|layername=mdot_log_miles",
-            "Log Mile Reference",
-            "ogr",
+            "mdot_log_miles.gpkg|layername=mdot_log_miles", "Log Mile Reference", "ogr",
         )
 
     @staticmethod
