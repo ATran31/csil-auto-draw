@@ -19,12 +19,12 @@ qgs = QgsApplication([], False)
 qgs.initQgis()
 
 filename = "Test Data"
-filepath = f"c:/users/an.tran***REMOVED***/desktop/tfad/source data/{filename}.xlsx"
+filepath = f"c:/users/an.tran/desktop/tfad/source data/{filename}.xlsx"
 
 segments = load_segments(filepath)
 
 digitizer = Digitizer(
-    log_mile_data="c:/users/an.tran***REMOVED***/desktop/tfad/mdot_log_miles.gpkg|layername=mdot_log_miles"
+    log_mile_data="c:/users/an.tran/desktop/tfad/mdot_log_miles.gpkg|layername=mdot_log_miles"
 )
 
 for segment in segments:
@@ -37,12 +37,12 @@ for segment in segments:
 
 # write output to file
 digitizer.save_features(
-    f"c:/users/an.tran***REMOVED***/desktop/tfad/drawn_segments/{filename}_auto_draw.geojson"
+    f"c:/users/an.tran/desktop/tfad/drawn_segments/{filename}_auto_draw.geojson"
 )
 
 # write failures to file
 digitizer.save_errors(
-    f"c:/users/an.tran***REMOVED***/desktop/tfad/drawn_segments/{filename}_auto_draw_FAILED.txt"
+    f"c:/users/an.tran/desktop/tfad/drawn_segments/{filename}_auto_draw_FAILED.txt"
 )
 
 # Finally, exitQgis() is called to remove the
